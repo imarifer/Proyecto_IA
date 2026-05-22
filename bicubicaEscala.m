@@ -4,6 +4,8 @@ function imgF = bicubicaEscala(img, escala)
   #Obtenemos el nuevo tamaño de la matriz de los pixeles de la imagen a la escala que se quiere lograr
   nh = round(h*escala);
   nw = round(w*escala);
+  disp(nh);
+  disp(nw);
   #Inicializamos matriz para los pixeles de la imagen escalada
   imgF = zeros(nh,nw);
   #Relación entre la imágen original y la imágen que se va a escalar
@@ -28,6 +30,8 @@ function imgF = bicubicaEscala(img, escala)
       y2 = max(y1-1,1);
       y3 = min(y1+1,w);
       y4 = min(y3+1,w);
+      disp(y1);
+      disp(y2);
 
       #Obtenemos los puntos Qij, del peso en z para cada uno de los pares de valores x-y
       Q11 = img(x1,y1);
